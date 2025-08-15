@@ -14,7 +14,6 @@ std::vector<int> sumVectors(const std::vector<int>& a, const std::vector<int>& b
 
 int main() {
     std::vector<int> a(N), b(N), c(N);
-    std::vector<int> sum = sumVectors(a, b);
 
     for (size_t i = 0; i < N; ++i) {
         a[i] = i;
