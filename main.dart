@@ -1,24 +1,24 @@
+import 'dart:typed_data';
 
-
-List<int> vec_sum(List<int> a, List<int> b) {
-    final List<int> result = List<int>.filled(a.length, 0);
-    for (var i = 0; i < a.length; i++) {
-        result[i] = a[i] + b[i];
-    }
-    return result;
+Int32List vecSum(Int32List a, Int32List b) {
+  final n = a.length;
+  final result = Int32List(n);
+  for (var i = 0; i < n; i++) {
+    result[i] = a[i] + b[i];
+  }
+  return result;
 }
 
-
 void main() {
-    const int size = 10000000;
-    
-    // Create two lists (vectors) with random values
-    final List<int> a = List.generate(size, (i) => i);
-    final List<int> b = List.generate(size, (i) => i);
-    
-    // Create result vector and perform addition
-    final List<int> result = vec_sum(a, b);
-    
-    // Print the last element
-    print('Last element of the sum: ${result[size - 1]}');
+  const int size = 10_000_000;
+
+  final a = Int32List(size);
+  final b = Int32List(size);
+  for (var i = 0; i < size; i++) {
+    a[i] = i;
+    b[i] = i;
+  }
+
+  final result = vecSum(a, b);
+  print('Last element of the sum: ${result[size - 1]}');
 }
