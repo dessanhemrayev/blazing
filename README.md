@@ -40,5 +40,6 @@ rustc -C opt-level=3 main.rs -o main_rs
 ### Performance Results
 
 ![Blazing Vector Sum Benchmark Results](./images/result.png)
+![Blazing Vector Sum Benchmark Results](./images/result2.png)
 
 *Figure 1: Execution time comparison across languages*
